@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Destinations</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Travel Destinations</h1>
+    </header>
+
+    <section class="form-section">
+      <h2 id="form-title">Add Destination</h2>
+      <form id="destination-form">
+        <input type="hidden" id="edit-id">
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" required>
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <input type="text" id="country" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="3"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Add</button>
+          <button type="button" id="cancel-btn" class="btn-secondary" style="display:none">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>All Destinations</h2>
+      <div id="loading">Loading...</div>
+      <div id="destination-list"></div>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
